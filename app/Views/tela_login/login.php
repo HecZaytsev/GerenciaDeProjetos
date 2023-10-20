@@ -1,3 +1,6 @@
+<?php
+session()->destroy(); // Destroi a sessão, se existir
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +40,7 @@
             <div class="login-box">
                 <h2 class="text-center mb-4">Login</h2>
 
-                <form method="post" action="processa_login.php">
+                <form id="log" method="post" action="<?= base_url('/entrar') ?>">                   
                     <div class="mb-3 input-group">
                         <span class="input-group-text">Usuário:</span>
                         <input type="text" id="username" name="username" class="form-control" required>
